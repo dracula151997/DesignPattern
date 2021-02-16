@@ -11,7 +11,7 @@ public class SingletonTest {
 
     }
 
-    public static class LazyInitializedThread extends Thread {
+     static class LazyInitializedThread extends Thread {
         @Override
         public void run() {
             LazyInitializedSingleton instance = LazyInitializedSingleton.getInstance();
@@ -19,7 +19,7 @@ public class SingletonTest {
         }
     }
 
-    public static class ThreadSafeSingleton extends Thread {
+    static class ThreadSafeSingleton extends Thread {
         @Override
         public void run() {
             ThreadSafeSingletonWithDoubleLocking instance = ThreadSafeSingletonWithDoubleLocking.getInstance();
