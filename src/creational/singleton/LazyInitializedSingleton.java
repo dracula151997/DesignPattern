@@ -7,7 +7,7 @@ public class LazyInitializedSingleton {
      * it can cause issues if multiple threads are inside the if condition at the same time.
      * It will destroy the singleton pattern and both threads will get the different instances of the singleton class.
      *
-     * This approach is fine of the Single-threaded
+     * This approach is fine of the Single-threaded only
      */
     private static LazyInitializedSingleton instance;
 

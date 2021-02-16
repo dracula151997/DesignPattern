@@ -1,6 +1,6 @@
 package creational.singleton;
 
-public class Driver {
+public class SingletonTest {
     public static void main(String[] args) {
 
         new LazyInitializedThread().start();
@@ -11,7 +11,7 @@ public class Driver {
 
     }
 
-    public static class LazyInitializedThread extends Thread{
+    public static class LazyInitializedThread extends Thread {
         @Override
         public void run() {
             LazyInitializedSingleton instance = LazyInitializedSingleton.getInstance();
@@ -19,7 +19,7 @@ public class Driver {
         }
     }
 
-    public static class ThreadSafeSingleton extends Thread{
+    public static class ThreadSafeSingleton extends Thread {
         @Override
         public void run() {
             ThreadSafeSingletonWithDoubleLocking instance = ThreadSafeSingletonWithDoubleLocking.getInstance();
